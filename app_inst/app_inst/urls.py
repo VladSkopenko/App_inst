@@ -15,8 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+    path("", include("app_photo.urls")), # Тут я додав якщо приходить на корінь, корінь в джанго цу "" то перенаправляй одразу на фото урлс.
     path("admin/", admin.site.urls),
 ]
