@@ -4,5 +4,7 @@ from . import views
 
 app_name = "app_photo"  # название переменной обяхательно должно быть app_name
 urlpatterns = [
-    path("", views.index, name="home"),  # app_photo:home
+    path("", views.index, name="home"),
+    path("images/", views.pictures, name="pictures"),
+    path("upload/", views.upload, name="upload"),  # app_photo:home
 ]
