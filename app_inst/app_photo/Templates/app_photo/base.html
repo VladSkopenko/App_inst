@@ -16,9 +16,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="/images">Pictures</a>
-        <a class="nav-link" href="/upload">Upload</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'app_photo:home' %}">Home</a>
+        <a class="nav-link" href="{% url 'app_photo:pictures' %}">Pictures</a>
+        <a class="nav-link" href="{% url 'app_photo:upload' %}">Upload</a>
         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
       </div>
     </div>
