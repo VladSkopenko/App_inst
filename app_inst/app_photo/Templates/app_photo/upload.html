@@ -6,12 +6,14 @@
             {% csrf_token %}
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Description</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               {{ form.description }}
                 <div id="emailHelp" class="form-text">Description for picture</div>
+                <span> {{ form.errors.description }}</span>
             </div>
             <div class="mb-3">
                 <label for="formFile" class="form-label">Description for picture</label>
-                <input class="form-control" type="file" id="formFile">
+                {{ form.path }}
+                <span> {{ form.errors.path }}</span>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="submit" class="btn btn-secondary">Reset</button>
