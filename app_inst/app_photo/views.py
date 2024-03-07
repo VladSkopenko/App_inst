@@ -1,17 +1,17 @@
 from django.shortcuts import render, redirect
 
-from forms import PictureForm
-from models import Picture
+from .forms import PictureForm
+from .models import Picture
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, template_name="app_photo/index.html", context={"msg": "Hello world"})
+    return render(request, "app_photo/index.html", context={"msg": "Hello world"})
 
 
 def pictures(request):
-    return render(request, template_name="app_photo/pictures.html", context={})
+    return render(request, "app_photo/pictures.html", context={})
 
 
 def upload(request):
@@ -21,4 +21,4 @@ def upload(request):
         if form.is_valid():
             form.save()
             return redirect(to="app_photo:pictures")
-    return render(request, template_name="app_photo/upload.html", context={"form": form})
+    return render(request, "app_photo/upload.html", context={"form": form})

@@ -8,7 +8,6 @@ class PictureForm(ModelForm):
                             widget=TextInput(attrs={"class": "form-control", "id": "exampleInputEmail"}))
     path = ImageField(widget=FileInput(attrs={"class": "form-control", "id": "formFile", "accept": "image/*"}))
 
-
-class Meta:
-    model = Picture
-    fields = ["description", "path"]
+    class Meta:
+        model = Picture
+        fields = ["description", "path"]
